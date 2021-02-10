@@ -1,20 +1,20 @@
 # rust-actix-graphql-sqlx-postgresql
 Using GraphQL with Rust and Apollo Federation
 
-This talk will cover:
+## Version
+See [Cargo.toml](Cargo.toml) version
+
+## Walkthrough
+This repo and accompanying information was presented at [RustLang Los Angeles February 2021 - see video](https://youtu.be/hMIL12Mj7Pw)
+
+This talk covered:
 - Core concepts of GraphQL
 - Core concepts of GraphQL federation vs schema stitching
 - Rust
 - SQLx + PostgreSQL
 - async-graphql
 - actix
-- Apollo Federation (node.js)
-
-## Version
-See [Cargo.toml](Cargo.toml) version
-
-## Walkthrough
-This repo and accompanying information was presented at [RustLang Los Angeles February 2021 - see video](https://youtu.be/hMIL12Mj7Pw)
+- Apollo Federation with Node.js
 
 ## Platforms / Technologies
 * [Rust](https://www.rust-lang.org/en-US/)
