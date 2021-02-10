@@ -34,13 +34,13 @@ See [Cargo.toml](Cargo.toml) version
 >      $ cargo install sqlx-cli
 
 ### Run user microservice
->      $ cd ./user
+>      $ cd ./svc-user
 >      $ sqlx database create
 >      $ sqlx migrate run
 >      $ cargo run
 
 ### Run skill microservice
->      $ cd ./skill
+>      $ cd ./svc-skill
 >      $ sqlx migrate run
 >      $ cargo run
 
