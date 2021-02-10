@@ -3,7 +3,7 @@ import { ApolloGateway } from "@apollo/gateway";
 
 const gateway = new ApolloGateway({
 	serviceList: [
-		{ name: "users", url: "http://localhost:8080/" },
+		{ name: "coders", url: "http://localhost:8080/" },
 		{ name: "skills", url: "http://localhost:8081/" },
 	]
 });
