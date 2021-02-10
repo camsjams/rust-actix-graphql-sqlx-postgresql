@@ -1,0 +1,18 @@
+[package]
+name = "svc-skill"
+version = "0.0.1"
+authors = ["Cameron <cameron.manavian@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+actix-web = "3"
+anyhow = "1.0.28"
+async-graphql = {version = "2.5.1", default-features = false }
+async-graphql-actix-web = "2.5.1"
+chrono = { version = "0.4.11", features = ["serde"] }
+dotenv = "0.15.0"
+env_logger = "0.7.1"
+log = "0.4.8"
+serde = "1.0.111"
+sqlx = { version = "0.4.2", features = ["runtime-actix-native-tls","uuid","postgres","chrono"] }
+uuid = { version = "0.8.1", features = ["serde","v4"] }

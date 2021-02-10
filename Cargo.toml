@@ -1,5 +1,5 @@
 [workspace]
 members = [
-  "svc-user",
+  "svc-coder",
   "svc-skill"
 ]

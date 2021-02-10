@@ -24,16 +24,29 @@ This talk covered:
 * [Apollo GraphQL](https://www.apollographql.com/)
 * [Node.js](https://nodejs.org/en/)
 
-## Run user microservice
+
+
+## Servers
+### Optional - Setup Local PostGreSQL database
+>      $ ./scripts/docker/init-db.sh
+
+### Optional - Setup SQLx cli
+>      $ cargo install sqlx-cli
+
+### Run user microservice
 >      $ cd ./user
+>      $ sqlx database create
+>      $ sqlx migrate run
 >      $ cargo run
 
-## Run skill microservice
+### Run skill microservice
 >      $ cd ./skill
+>      $ sqlx migrate run
 >      $ cargo run
 
-## Run Gateway
+### Run Gateway
 >      $ cd ./gateway
+>      $ npm install
 >      $ npm run dev
 
 
