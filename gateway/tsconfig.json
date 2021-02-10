@@ -1,0 +1,22 @@
+{
+  "include": [
+    "./server.ts",
+  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "downlevelIteration": true,
+    "outDir": "dist",
+    "baseUrl": "."
+  }
+}
