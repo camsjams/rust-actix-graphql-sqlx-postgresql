@@ -4,7 +4,7 @@ extern crate log;
 use actix_web::{guard, middleware, web, App, HttpRequest, HttpServer, Responder};
 use anyhow::Result;
 use async_graphql::{Context, EmptySubscription, FieldResult, Object, Schema, ID};
-use async_graphql_actix_web::{Request, Response};
+use async_graphql_actix_web::{GraphQLRequest, GraphQLResponse};
 use dotenv::dotenv;
 use model::Coder;
 use sqlx::postgres::PgPool;
@@ -83,7 +83,7 @@ impl Mutation {
 
 type ServiceSchema = Schema<Query, Mutation, EmptySubscription>;
 
-async fn index(schema: web::Data<ServiceSchema>, req: Request) -> Response {
+async fn index(schema: web::Data<ServiceSchema>, req: GraphQLRequest) -> GraphQLResponse {
     schema.execute(req.into_inner()).await.into()
 }
 
@@ -103,7 +103,7 @@ async fn main() -> Result<()> {
 
     let server = HttpServer::new(move || {
         App::new()
-            .data(schema.clone())
+            .app_data(web::Data::new(schema.clone()))
             .wrap(middleware::Logger::default())
             .service(web::resource("/").guard(guard::Post()).to(index))
             .route("/ping", web::get().to(ping))
