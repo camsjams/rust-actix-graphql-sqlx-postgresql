@@ -2,17 +2,17 @@
 name = "svc-skill"
 version = "0.0.1"
 authors = ["Cameron <cameron.manavian@gmail.com>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
-actix-web = "3"
-anyhow = "1.0.28"
-async-graphql = {version = "2.5.1", default-features = false }
-async-graphql-actix-web = "2.5.1"
-chrono = { version = "0.4.11", features = ["serde"] }
+actix-web = { version = "4.0.0-rc.2", default-features = false, features = ["macros"] }
+anyhow = "1.0.53"
+async-graphql = {version = "3.0.29", default-features = false, features = ["chrono", "uuid"] }
+async-graphql-actix-web = "3.0.29"
+chrono = { version = "0.4.19", features = ["serde"] }
 dotenv = "0.15.0"
-env_logger = "0.7.1"
-log = "0.4.8"
-serde = "1.0.111"
-sqlx = { version = "0.4.2", features = ["runtime-actix-native-tls","uuid","postgres","chrono"] }
-uuid = { version = "0.8.1", features = ["serde","v4"] }
+env_logger = "0.9.0"
+log = "0.4.14"
+serde = "1.0.136"
+sqlx = { version = "0.5.10", features = ["runtime-actix-native-tls","uuid","postgres","chrono","macros"] }
+uuid = { version = "0.8.2", features = ["serde","v4"] }
